@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path={"/"} element={<Auth username={username} />} />
+        <Route path={"/"} element={<Auth/>} />
         <Route path={"/register"} element={<Auth insideRegister={true}/>}  />
         <Route path={"/home"} element={<Home/>} />
       </Routes>

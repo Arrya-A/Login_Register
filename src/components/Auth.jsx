@@ -25,6 +25,7 @@ const Auth = ({ insideRegister }) => {
   //   password: "",
   // });
   const navigate = useNavigate();
+
   const {
     register,
     handleSubmit,
@@ -69,7 +70,7 @@ const Auth = ({ insideRegister }) => {
 
     if (matchedUser) {
       alert("Login successful!");
-      navigate("/home");
+      navigate("/home", { state: { username: matchedUser.username } });
     } else {
       alert("Invalid email or password");
     }
@@ -77,7 +78,6 @@ const Auth = ({ insideRegister }) => {
 
   return (
     <>
-    
       <form onSubmit={handleSubmit(onSubmit)}>
         <Box
           sx={{
